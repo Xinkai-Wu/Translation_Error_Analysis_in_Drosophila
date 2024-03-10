@@ -5,13 +5,13 @@ The purpose of this script is to detect translation error events and identify th
 
 ## Steps
 
-### Step 1. Detect translation error events from MaxQuant output.
+### Step 1. Detect translation error events from MaxQuant output
 The mass spectrometry data were initially subjected to identification of corresponding Base peptides and Dependent peptides using the MaxQuant software. Additionally, a previously published pipeline (Mordret et al., 2019, Mol. Cell) was employed to identify amino acid translation error events and calculate the overall translation error frequency at the codon level. For a detailed description of the process, refer to **TranslationError_01_ErrorDetected.ipynb**.
 
 ### Step 2. Inference and statistical analysis of mismatched base pairs in translation errors
 For the identified translation error events, an analysis was conducted to statistically assess the potential mismatched base pair positions. The specific computational procedure is outlined in **TranslationError_02_ErrorCharacters.ipynb**.
 
-### Step 3. Simulation of translation error detection.
+### Step 3. Simulation of translation error detection
 For codons where translation errors were not detected, it was assumed that this was due to underrepresentation resulting from low usage frequency. To account for this, we employed a specified translation error rate and varied the detection depth of mass spectrometry to simulate this process. For a detailed implementation, refer to **TranslationError_03_DetectedSimulation.ipynb**.
 
 ### Step 4. Association between Codon Usage Frequency and Translation Error Rate
